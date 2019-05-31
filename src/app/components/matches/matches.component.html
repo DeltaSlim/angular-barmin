@@ -1,0 +1,10 @@
+<!-- <h2>Active Bets</h2> -->
+<div class="card mb-3" *ngFor="let open of openMatches">
+  <div class="card-body">
+    <h3>{{ open.details }}</h3>
+    <p>{{ open.homeTeam }} vs. {{ open.awayTeam}}</p>
+    <button>Place Bet</button>
+  </div>
+</div>
+
+
