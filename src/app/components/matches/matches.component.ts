@@ -15,9 +15,9 @@ export class MatchesComponent implements OnInit {
 
 ngOnInit() {
 
-  this.matchService.getOpenMatches().subscribe(openMatches => {
-      // this.openMatches = openMatches._embedded;
-      console.log(openMatches);
+  this.matchService.getOpenMatches().subscribe(res => {
+      this.openMatches = res._embedded.matches;
+      console.log(this.o);
     });
 
   }
