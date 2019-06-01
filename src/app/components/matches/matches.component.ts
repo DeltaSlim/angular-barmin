@@ -17,7 +17,7 @@ ngOnInit() {
 
   this.matchService.getOpenMatches().subscribe(res => {
       this.openMatches = res._embedded.matches;
-      console.log(this.o);
+      console.log(res);
     });
 
   }
