@@ -20,5 +20,10 @@ export class MatchService {
     params = params.append('sort','matchTime');
     return this.http.get<any>(this.openUrl, {params: params});
   }
+
+  getFeaturedMatches() : Observable<PagedResponse<Match>> {
+    return this.http.get<any>(this.openUrl);
+  }
+
   
 }
