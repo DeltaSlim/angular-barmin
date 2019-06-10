@@ -19,6 +19,10 @@ export class MatchService {
     params = params.append('matchTime','2999-01-01T00:00:00Z');
     params = params.append('sort','matchTime');
     return this.http.get<any>(this.openUrl, {params: params});
-  }
+  };
+
+  getFeaturedMatches() : Observable<Match[]> {
+    return this.http.get<Match[]>(this.openUrl);
+  };
   
 }

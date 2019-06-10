@@ -10,11 +10,12 @@ import { MatchesComponent } from './components/matches/matches.component';
 import { MatchService } from './services/match.service';
 import { ActiveBetsComponent } from './components/active-bets/active-bets.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FeaturedComponent } from './components/featured/featured.component';
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule ],
-  declarations: [ AppComponent, HelloComponent, NavbarComponent, MatchesComponent, ActiveBetsComponent, FooterComponent],
+  declarations: [ AppComponent, HelloComponent, NavbarComponent, MatchesComponent, ActiveBetsComponent, FooterComponent, FeaturedComponent],
   bootstrap:    [ AppComponent ],
   providers: [MatchService]
 })
