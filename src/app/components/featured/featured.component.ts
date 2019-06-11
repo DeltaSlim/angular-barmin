@@ -9,13 +9,13 @@ import { Match } from '../../models/Match';
   styleUrls: ['./featured.component.css']
 })
 export class FeaturedComponent implements OnInit {
-  featuredMatches: Match[];
+  featuredMatches: Match[] = [];
 
   constructor(private matchService: MatchService) { }
 
   ngOnInit() {
     this.matchService.getFeaturedMatches().subscribe(res =>{
-      this.featuredMatches = res;
+      this.featuredMatches = res._embedded.matches;
       console.log(res);
     });
   }

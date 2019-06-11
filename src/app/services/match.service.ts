@@ -21,8 +21,8 @@ export class MatchService {
     return this.http.get<any>(this.openUrl, {params: params});
   };
 
-  getFeaturedMatches() : Observable<Match[]> {
-    return this.http.get<Match[]>(this.openUrl);
+  getFeaturedMatches() : Observable<PagedResponse<Match>> {
+    return this.http.get<any>(this.openUrl);
   };
   
 }
