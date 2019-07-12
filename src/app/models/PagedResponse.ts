@@ -1,5 +1,5 @@
 export interface PagedResponse<T> {
-  _embedded: T[];
+  _embedded: Embedded<T>;
   links: {
     first: string,
         self: string,
@@ -16,3 +16,7 @@ export interface PagedResponse<T> {
         _number: number
   };
 }
+
+  interface Embedded<T> {
+    [key: string]: T[];
+  }

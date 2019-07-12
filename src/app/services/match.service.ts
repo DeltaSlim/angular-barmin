@@ -24,5 +24,19 @@ export class MatchService {
   getFeaturedMatches() : Observable<PagedResponse<Match>> {
     return this.http.get<any>(this.openUrl);
   };
+
+  getLiveMatches(params?: HttpParams) : Observable<PagedResponse<Match>> {
+    params = params ? params : new HttpParams();
+    if (!params.has('projection')) {
+        params.append('projection', 'results');
+
+    }
+    params.append('isFinished', 'false');
+    const date = new Date();
+    params = params.append('matchTime',date.toISOString());
+    params = params.append('matchTime','2999-01-01T00:00:00Z');
+    params = params.append('sort','matchTime');
+    return this.http.get<any>(this.openUrl, {params: params});
+  };
   
 }
