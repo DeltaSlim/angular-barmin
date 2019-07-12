@@ -12,8 +12,8 @@ export class MatchService {
 
   constructor(private http: HttpClient) { }
 
-  getOpenMatches() : Observable<PagedResponse<Match>> {
-    let params = new HttpParams();
+  getOpenMatches(params?: HttpParams) : Observable<PagedResponse<Match>> {
+    params = params ? params : new HttpParams();
     const date = new Date();
     params = params.append('matchTime',date.toISOString());
     params = params.append('matchTime','2999-01-01T00:00:00Z');
@@ -33,8 +33,8 @@ export class MatchService {
     }
     params.append('isFinished', 'false');
     const date = new Date();
+    params = params.append('matchTime','1970-01-01T00:00:00Z');
     params = params.append('matchTime',date.toISOString());
-    params = params.append('matchTime','2999-01-01T00:00:00Z');
     params = params.append('sort','matchTime');
     return this.http.get<any>(this.openUrl, {params: params});
   };
