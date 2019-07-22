@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatchService } from '../../services/match.service';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 import { Match } from '../../models/Match';
 
@@ -14,7 +15,10 @@ export class FeaturedComponent implements OnInit {
   constructor(private matchService: MatchService) { }
 
   ngOnInit() {
-    this.matchService.getFeaturedMatches().subscribe(res =>{
+    let params = new HttpParams();
+    params = params.append('size', '5');
+
+    this.matchService.getOpenMatches(params).subscribe(res =>{
       this.featuredMatches = res._embedded.matches;
       console.log(res);
     });

@@ -1,23 +1,13 @@
-<!-- <h2>Active Bets</h2> -->
+<h3>Live and Upcoming Games</h3>
 <div class="card mb-3" *ngFor="let live of liveMatches">
   <div class="card-body">
-    <h4>{{live.matchTime | date:"medium"}} - {{live.sport}}</h4>
-    <hr> 
-    <h3>{{ live.awayTeam }} @ {{live.homeTeam}}</h3>
-    <h3>Away - {{live.awayTeam}}</h3>
-    <h3>Home - {{live.homeTeam}} </h3>
-    <button>Place Bet</button>
+    <h3>{{live.matchTime | date:"medium"}} | {{ live.awayTeam }} @ {{live.homeTeam}}</h3>
   </div>
 </div>
 
 <div class="card mb-3" *ngFor="let open of openMatches">
   <div class="card-body">
-    <h4>{{open.matchTime | date:"medium"}} - {{open.sport}}</h4>
-    <hr> 
-    <h3>{{ open.awayTeam }} @ {{open.homeTeam}}</h3>
-    <h3>Away - {{open.awayTeam}}</h3>
-    <h3>Home - {{open.homeTeam}} </h3>
-    <button>Place Bet</button>
+    <h3>{{open.matchTime | date:"medium"}} | {{ open.awayTeam }} @ {{open.homeTeam}}</h3>
   </div>
 </div>
 

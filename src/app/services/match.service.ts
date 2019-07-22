@@ -21,10 +21,6 @@ export class MatchService {
     return this.http.get<any>(this.openUrl, {params: params});
   };
 
-  getFeaturedMatches() : Observable<PagedResponse<Match>> {
-    return this.http.get<any>(this.openUrl);
-  };
-
   getLiveMatches(params?: HttpParams) : Observable<PagedResponse<Match>> {
     params = params ? params : new HttpParams();
     if (!params.has('projection')) {

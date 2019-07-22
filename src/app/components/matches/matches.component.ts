@@ -18,16 +18,15 @@ export class MatchesComponent implements OnInit {
 ngOnInit() {
 let params = new HttpParams();
 // params = params.append('sport', 'NFL');
-params = params.append('projection', 'odds');
+// params = params.append('projection', 'odds');
+params = params.append('size', '10');
 
   this.matchService.getLiveMatches(params).subscribe(res => {
       this.liveMatches = res._embedded.matches;
-      console.log(res);
     });
 
- this.matchService.getOpenMatches().subscribe(res => {
+ this.matchService.getOpenMatches(params).subscribe(res => {
       this.openMatches = res._embedded.matches;
-      console.log(res);
     });
 
   }
