@@ -13,11 +13,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FeaturedComponent } from './components/featured/featured.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, AppRoutingModule ],
-  declarations: [ AppComponent, HelloComponent, NavbarComponent, MatchesComponent, FooterComponent, FeaturedComponent, HomeComponent, LoginComponent],
+  declarations: [ AppComponent, HelloComponent, NavbarComponent, MatchesComponent, FooterComponent, FeaturedComponent, HomeComponent, LoginComponent, RegisterComponent],
   bootstrap:    [ AppComponent ],
   providers: [MatchService]
 })
