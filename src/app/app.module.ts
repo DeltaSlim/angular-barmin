@@ -12,11 +12,12 @@ import { MatchService } from './services/match.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { FeaturedComponent } from './components/featured/featured.component';
 import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, AppRoutingModule ],
-  declarations: [ AppComponent, HelloComponent, NavbarComponent, MatchesComponent, FooterComponent, FeaturedComponent, HomeComponent],
+  declarations: [ AppComponent, HelloComponent, NavbarComponent, MatchesComponent, FooterComponent, FeaturedComponent, HomeComponent, LoginComponent],
   bootstrap:    [ AppComponent ],
   providers: [MatchService]
 })
