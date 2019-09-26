@@ -5,4 +5,8 @@ export class HttpService {
 
   constructor() { }
 
+
+  getLiveGames() {
+    
+  }
 }
