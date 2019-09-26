@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-live',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LiveComponent implements OnInit {
 
-  constructor() { }
+  liveGames: Object;
+
+  constructor(private _http:HttpService) { }
 
   ngOnInit() {
+    this._http.getLiveGames().subscribe(data =>{
+      this.liveGames = data;
+      console.log(this.liveGames);
+    });
   }
 
 }

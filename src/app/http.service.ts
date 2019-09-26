@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class HttpService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
 
   getLiveGames() {
-    return console.log("test");
+    return this.http.get('https://barmin.cfapps.io/matches');
   }
 }
