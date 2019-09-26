@@ -7,6 +7,6 @@ export class HttpService {
 
 
   getLiveGames() {
-    
+    return console.log("test");
   }
 }
