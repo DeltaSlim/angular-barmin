@@ -9,11 +9,12 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LiveComponent } from './live/live.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpService } from './http.service';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, ],
-  declarations: [ AppComponent, HelloComponent, NavbarComponent, LiveComponent, FooterComponent],
+  declarations: [ AppComponent, HelloComponent, NavbarComponent, LiveComponent, FooterComponent, HomeComponent],
   bootstrap:    [ AppComponent ],
   providers: [HttpService]
 })
