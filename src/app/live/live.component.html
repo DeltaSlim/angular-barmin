@@ -1,3 +1,7 @@
-<p>
-live works!
-</p>
+<ul class="collection center" *ngIf="liveGames">
+      <li class="collection-item">{{liveGames[0].awayTeam}} @ {{liveGames[0].homeTeam}}<i class="material-icons">lock</i></li>
+      <li class="collection-item">{{liveGames[1].awayTeam}} @ {{liveGames[1].homeTeam}}<i class="material-icons">lock</i></li>
+      <li class="collection-item">{{liveGames[2].awayTeam}} @ {{liveGames[2].homeTeam}}<i class="material-icons">lock</i></li>
+      <li class="collection-item">{{liveGames[3].awayTeam}} @ {{liveGames[3].homeTeam}}<i class="material-icons">lock</i></li>
+      <li class="collection-item">{{liveGames[4].awayTeam}} @ {{liveGames[4].homeTeam}}<i class="material-icons">lock</i></li>
+    </ul>
