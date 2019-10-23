@@ -1,16 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
 .nav-wrapper{
-  background: #219653;
-  
+    background: #219653;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.brand-logo{
-  color: black;
-  font-family: 'Montserrat', sans-serif;
-}
-
-ul li a{
-  color: black;
-  font-family: 'Montserrat', sans-serif;
-}
