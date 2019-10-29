@@ -6,3 +6,9 @@
 h2, h4 {
   font-family: 'Montserrat', sans-serif;
 }
+
+.btn-large {
+  background: #219653;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+}
