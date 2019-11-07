@@ -11,11 +11,12 @@ import { FooterComponent } from './footer/footer.component';
 import { HttpService } from './http.service';
 import { HomeComponent } from './home/home.component';
 import { PerksComponent } from './perks/perks.component';
+import { LiveUpcomingComponent } from './live-upcoming/live-upcoming.component';
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, ],
-  declarations: [ AppComponent, HelloComponent, NavbarComponent, LiveComponent, FooterComponent, HomeComponent, PerksComponent],
+  declarations: [ AppComponent, HelloComponent, NavbarComponent, LiveComponent, FooterComponent, HomeComponent, PerksComponent, LiveUpcomingComponent],
   bootstrap:    [ AppComponent ],
   providers: [HttpService]
 })

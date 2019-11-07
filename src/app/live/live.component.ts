@@ -13,7 +13,7 @@ export class LiveComponent implements OnInit {
   constructor(private _http:HttpService) { }
 
   ngOnInit() {
-    this._http.getLiveGames('NFL').subscribe(data =>{
+    this._http.getInProgressGames('NFL').subscribe(data =>{
       this.liveGames = data;
       console.log(this.liveGames);
     });
